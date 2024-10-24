@@ -1,4 +1,4 @@
-module sigs.k8s.io/custom-metrics-apiserver
+module github.com/RafaySystems/custom-metrics-apiserver
 
 go 1.22.1
 
@@ -18,6 +18,7 @@ require (
 	k8s.io/kube-openapi v0.0.0-20240430033511-f0e62f92d13f
 	k8s.io/metrics v0.31.1
 	k8s.io/utils v0.0.0-20240711033017-18e509b52bc8
+	sigs.k8s.io/custom-metrics-apiserver v1.30.0
 )
 
 require (
@@ -92,7 +93,6 @@ require (
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
 	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
-	google.golang.org/genproto v0.0.0-20231212172506-995d672761c0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240528184218-531527333157 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240701130421-f6361c86f094 // indirect
 	google.golang.org/grpc v1.65.0 // indirect
