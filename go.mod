@@ -1,4 +1,4 @@
-module sigs.k8s.io/custom-metrics-apiserver
+module github.com/RafaySystems/custom-metrics-apiserver
 
 go 1.23.0
 
@@ -18,6 +18,7 @@ require (
 	k8s.io/kube-openapi v0.0.0-20241105132330-32ad38e42d3f
 	k8s.io/metrics v0.32.2
 	k8s.io/utils v0.0.0-20241104100929-3ea5e8cea738
+	sigs.k8s.io/custom-metrics-apiserver v1.30.0
 )
 
 require (
