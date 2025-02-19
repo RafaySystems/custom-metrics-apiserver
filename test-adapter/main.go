@@ -17,7 +17,6 @@ limitations under the License.
 package main
 
 import (
-	"context"
 	"net/http"
 	"os"
 	"time"
@@ -86,7 +85,7 @@ func main() {
 		}
 		klog.Fatal(server.ListenAndServe())
 	}()
-	if err := cmd.Run(context.Background()); err != nil {
+	/*if err := cmd.Run(context.Background()); err != nil {
 		klog.Fatalf("unable to run custom metrics adapter: %v", err)
-	}
+	}*/
 }

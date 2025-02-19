@@ -23,8 +23,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	genericapiserver "k8s.io/apiserver/pkg/server"
-	utilversion "k8s.io/apiserver/pkg/util/version"
 	"k8s.io/client-go/informers"
+	"k8s.io/component-base/version"
 	cminstall "k8s.io/metrics/pkg/apis/custom_metrics/install"
 	eminstall "k8s.io/metrics/pkg/apis/external_metrics/install"
 
@@ -76,7 +76,7 @@ type CompletedConfig struct {
 
 // Complete fills in any fields not set that are required to have valid data. It's mutating the receiver.
 func (c *Config) Complete(informers informers.SharedInformerFactory) CompletedConfig {
-	c.GenericConfig.EffectiveVersion = utilversion.NewEffectiveVersion("1.0")
+	c.GenericConfig.EffectiveVersion = version.DefaultBuildEffectiveVersion()
 	/*EffectiveVersion{
 		Major: "1",
 		Minor: "0",
